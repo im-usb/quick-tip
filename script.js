@@ -1,3 +1,8 @@
+function formatMoney(value){
+    value = value.toFixed(2);
+    return "$" + value;
+}
+
 function update() {
     let bill = Number(document.getElementById("yourBill").value);
     let tipPercent = document.getElementById("tipInput").value;
@@ -10,11 +15,12 @@ function update() {
     let billEach = totalBill/split;
 
     document.getElementById("tipPercent").innerHTML = tipPercent + "%";
-    document.getElementById("totalWithTip").innerHTML = "$" + totalBill;
-    document.getElementById("tipValue").innerHTML = "$" + tipValue; 
-    document.getElementById("billEach").innerHTML = "$" + billEach;
-    document.getElementById("tipEach").innerHTML = "$" + tipEach;   
+    document.getElementById("totalWithTip").innerHTML = formatMoney(totalBill);
+    document.getElementById("tipValue").innerHTML = formatMoney(tipValue); 
+    document.getElementById("billEach").innerHTML = formatMoney(billEach);
+    document.getElementById("tipEach").innerHTML = formatMoney(tipEach);   
 }
+
 
 let container = document.getElementById("container");
 container.addEventListener("input",update);
