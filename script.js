@@ -18,7 +18,8 @@ function update() {
     document.getElementById("totalWithTip").innerHTML = formatMoney(totalBill);
     document.getElementById("tipValue").innerHTML = formatMoney(tipValue); 
     document.getElementById("billEach").innerHTML = formatMoney(billEach);
-    document.getElementById("tipEach").innerHTML = formatMoney(tipEach);   
+    document.getElementById("tipEach").innerHTML = formatMoney(tipEach);
+    document.getElementById("billSplit").innerHTML = split + " Person(s)";   
 }
 
 
