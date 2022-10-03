@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 
-body {
-    font-size: 8px;
+html {
+    font-size: 10px;
     color: #4d4d4d;
     font-family: Poppins, sans-serif;
 }
 main {
 
-   max-width: 50rem;
+   max-width: 500px;
    margin: 2rem auto;
    background: linear-gradient(30deg,#3dc0c0, #5bceae);
    padding: 3rem 1.6rem 6rem 1.6rem;
@@ -19,8 +19,10 @@ main {
 h1 {
    text-align: center;
    font-size: 3rem;
+   /* removing default heading margin */
    margin: 0;
-   padding: 3rem;
+   /* main has 3rem padding applying baove heading, so balance it up: */
+   padding-bottom: 3rem;
 }
 
 section {
@@ -79,6 +81,8 @@ input[type="number"] {
    background: #eee;
    margin-top: 1.2rem;
    border-radius: 0.3rem;
+   /* outline only appears on focus (selected)- keep in for accessibility so user can use the tab
+    button to move through site, and will see active state */
    outline-color: #5bceae;
 
 }
